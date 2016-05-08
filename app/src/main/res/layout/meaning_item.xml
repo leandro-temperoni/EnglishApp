@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/meaning_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/number"
+        tools:text="1"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/meaning"
+        tools:text="this is a phrase meaning 'getting married without a formal expression'"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/example"
+        tools:text="&quot;Since legal marriage between us seems impossible, let's go jump the broom!&quot;"
+        style="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="italic"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

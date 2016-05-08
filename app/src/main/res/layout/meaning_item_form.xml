@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="3dp"
+    card_view:cardCornerRadius="2dp" >
+
+    <LinearLayout
+        android:id="@+id/meaning_view"
+        android:orientation="horizontal"
+        android:padding="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/meaning"
+                tools:text="this is a phrase meaning 'getting married without a formal expression'"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/example"
+                tools:text="&quot;Since legal marriage between us seems impossible, let's go jump the broom!&quot;"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:textStyle="italic"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/deleteMeaning"
+            android:src="@drawable/ic_delete_black_48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="@dimen/icon_size_meaning_form_item"
+            android:layout_height="@dimen/icon_size_meaning_form_item" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

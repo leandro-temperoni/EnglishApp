@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="3dp"
+    card_view:cardCornerRadius="2dp" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/entry"
+            tools:text="over the broomstick"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/type"
+                tools:text="expression"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:textStyle="italic"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/icons"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/volume"
+                    android:src="@drawable/ic_volume_up_black_48dp"
+                    android:layout_width="@dimen/icon_size_translation_item"
+                    android:layout_height="@dimen/icon_size_translation_item" />
+
+                <com.github.rahatarmanahmed.cpv.CircularProgressView
+                    android:id="@+id/volumeProgressBar"
+                    android:layout_width="@dimen/icon_size_translation_item"
+                    android:layout_height="@dimen/icon_size_translation_item"
+                    android:visibility="gone"
+                    app:cpv_animAutostart="true"
+                    app:cpv_indeterminate="true" />
+
+                <ImageView
+                    android:id="@+id/moreOptions"
+                    android:src="@drawable/ic_more_vert_black_18dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/icon_size_translation_item"
+                    android:layout_height="@dimen/icon_size_translation_item" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/meanings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
